@@ -1,4 +1,6 @@
-<?php namespace Prettus\Validator;
+<?php
+
+namespace Prettus\Validator;
 
 use Illuminate\Contracts\Validation\Factory;
 

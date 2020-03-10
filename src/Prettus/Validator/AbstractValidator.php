@@ -1,4 +1,6 @@
-<?php namespace Prettus\Validator;
+<?php
+
+namespace Prettus\Validator;
 
 use Illuminate\Support\MessageBag;
 use Prettus\Validator\Contracts\ValidatorInterface;
@@ -115,9 +117,9 @@ abstract class AbstractValidator implements ValidatorInterface
     /**
      * Pass the data and the rules to the validator or throws ValidatorException
      *
-     * @throws ValidatorException
      * @param string $action
      * @return boolean
+     * @throws ValidatorException
      */
     public function passesOrFail($action = null)
     {
@@ -240,8 +242,8 @@ abstract class AbstractValidator implements ValidatorInterface
                 // set 3rd parameter to id given to getValidationRules()
                 $p[2] = $id;
 
-                $params = implode(",", $p);
-                $rules[$ruleIdx] = $name.":".$params;
+                $params          = implode(",", $p);
+                $rules[$ruleIdx] = $name . ":" . $params;
             }
         });
 

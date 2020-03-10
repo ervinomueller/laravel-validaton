@@ -1,4 +1,6 @@
-<?php namespace Prettus\Validator\Contracts;
+<?php
+
+namespace Prettus\Validator\Contracts;
 
 use Illuminate\Contracts\Support\MessageBag;
 use Prettus\Validator\Exceptions\ValidatorException;
@@ -40,9 +42,9 @@ interface ValidatorInterface
     /**
      * Pass the data and the rules to the validator or throws ValidatorException
      *
-     * @throws ValidatorException
      * @param string $action
      * @return boolean
+     * @throws ValidatorException
      */
     public function passesOrFail($action = null);
 
